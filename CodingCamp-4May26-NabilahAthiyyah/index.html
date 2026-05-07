@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List Life Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="dashboard">
+      <section id="greeting-widget">
+        <h1 id="greeting-text"></h1>
+        <p id="greeting-time"></p>
+        <p id="greeting-date"></p>
+      </section>
+
+      <section id="focus-timer-widget">
+        <h2>Focus Timer</h2>
+        <!-- Focus Timer Widget: 25-minute Pomodoro countdown -->
+        <p id="timer-display"></p>
+        <button id="timer-start">Start</button>
+        <button id="timer-stop">Stop</button>
+        <button id="timer-reset">Reset</button>
+        <div id="timer-alert" hidden>Time's up!</div>
+      </section>
+
+      <section id="task-list-widget">
+        <h2>To-Do List</h2>
+        <!-- Task List Widget: add, edit, toggle, delete tasks -->
+        <input type="text" id="task-input" placeholder="Add a new task..." maxlength="500" />
+        <button id="task-add-btn">Add</button>
+        <ul id="task-list"></ul>
+      </section>
+
+      <section id="quick-links-widget">
+        <h2>Quick Links</h2>
+        <!-- Quick Links Widget: user-defined shortcut buttons -->
+        <input type="text" id="link-label-input" placeholder="Label (max 50 chars)" maxlength="50" />
+        <input type="url" id="link-url-input" placeholder="https://example.com" />
+        <button id="link-add-btn">Add Link</button>
+        <div id="links-container"></div>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
